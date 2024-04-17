@@ -6,7 +6,7 @@
 
 def valor_letra(entrada):
     alfabeto = ["a", "b", "c", "d", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-    valor_decimal = (alfabeto.index(entrada) + 1)
+    valor_decimal = (alfabeto.index(entrada.lower()) + 1)
     print(f"A letra {entrada} está na posição {valor_decimal} do alfabeto.")
     return valor_decimal
 
