@@ -13,7 +13,7 @@ fabricantes.insert(5, "Nissan")
 fabricantes[1] = "Chevrolet"
 fabricantes.remove("Gurgel")
 
-print(f"Lista com alterações: {fabricantes}")
+print(f"Lista com adição de Chevrolet e remoção de Gurgel: {fabricantes}")
 
 fabricantes.sort()
 print(f"Lista Ordenada Alfabeticamente: {fabricantes}")

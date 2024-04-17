@@ -4,7 +4,7 @@
 # Caso o valor seja par, retornar os valores pares de 2 ao valor passado
 # Caso seja ímpar, retornar os valores ímpares de 1 ao valor passado
 
-def letra(entrada):
+def valor_letra(entrada):
     alfabeto = ["a", "b", "c", "d", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     valor_decimal = (alfabeto.index(entrada) + 1)
     print(f"A letra {entrada} está na posição {valor_decimal} do alfabeto.")
@@ -16,4 +16,4 @@ def par_impar(valor_decimal):
     else:
         print(f"O valor {valor_decimal} é ímpar")
 
-par_impar(letra(input("Digite uma letra do alfabeto: ")))
+par_impar(valor_letra(input("Digite uma letra do alfabeto: ")))
