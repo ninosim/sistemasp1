@@ -6,6 +6,13 @@
 
 from funcoes import compra_dolar
 
-compra_dolar(str(input("Digite o nome do produto: ")), 
-            float(input("Digite o peso do produto (em gramas): ")),
-            float(input("Digite o valor do produto (em dólares): $ ")))
+produto = str(input("Digite o nome do produto: "))
+
+# O nome do produto está por fora pq idealmente uma função não deve receber parâmetros que não serão utilizados dentro dela.
+
+peso = float(input("Digite o peso do produto (em gramas): "))
+valor_dolar = float(input("Digite o valor do produto (em dólares): $ "))
+
+lista = compra_dolar(peso, valor_dolar)
+
+print(f"O valor do produto {produto} em reais é R$ {lista[0]:.2f}, o valor do seu frete é R$ {lista[0]:.2f}. O valor total de sua compra é R$ {lista[1]:.2f}.")

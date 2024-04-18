@@ -4,16 +4,25 @@
 # Caso o valor seja par, retornar os valores pares de 2 ao valor passado
 # Caso seja ímpar, retornar os valores ímpares de 1 ao valor passado
 
-def valor_letra(entrada):
-    alfabeto = ["a", "b", "c", "d", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-    valor_decimal = (alfabeto.index(entrada.lower()) + 1)
-    print(f"A letra {entrada} está na posição {valor_decimal} do alfabeto.")
-    return valor_decimal
+def posicao_alfabeto(entrada):
+    alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    posicao = (alfabeto.index(entrada.lower()) + 1)
+    return posicao
 
-def par_impar(valor_decimal):
-    if valor_decimal % 2 == 0:
-        print(f"O valor {valor_decimal} é par")
+def par_impar(posicao):
+    if posicao % 2 == 0:
+        print(f"O valor {posicao} é par e os números pares anteriores a ele são: ")
+        for i in range(2, posicao, 2):
+            print(i)
     else:
-        print(f"O valor {valor_decimal} é ímpar")
+        print(f"O valor {posicao} é ímpar e os números ímpares anteriores a ele são: ")
+        for i in range(1, posicao, 2):
+            print(i)
 
-par_impar(valor_letra(input("Digite uma letra do alfabeto: ")))
+letra = str(input("Digite uma letra do alfabeto: "))
+
+posicao = posicao_alfabeto(letra)
+
+print(f"A letra {letra} está na posição {posicao} do alfabeto.")
+
+par_impar(posicao)

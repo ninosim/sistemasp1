@@ -10,7 +10,4 @@ while entrada != 0:
     lista.append(entrada)
     print(lista)
 
-for i in lista:
-    soma = soma + i
-
-print(f"A soma dos valores digitados é: {soma}")
+print(f"A soma dos valores digitados é: {sum(lista)}")

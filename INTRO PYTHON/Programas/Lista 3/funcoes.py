@@ -1,10 +1,9 @@
-def compra_dolar(produto, peso, valor_dolar):
+def compra_dolar(peso, valor_dolar):
     cotacao_dolar = 5.09
     valor_real = valor_dolar * cotacao_dolar
     frete_dolar = (peso / 100) * 1.99
     frete_real = frete_dolar * cotacao_dolar
-    print(f"O valor do produto {produto} em reais é R$ {valor_real:.2f}, o valor do seu frete é de R$ {frete_real:.2f}. O valor total de sua compra é de R$ {(valor_real + frete_real):.2f}.")
-
+    return [valor_real, frete_real]
 
 def imc(nome, idade, peso, altura):
     print(f"O nome do usuário {nome} tem {len(nome)} caracteres.")
